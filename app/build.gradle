@@ -51,9 +51,11 @@ dependencies {
     implementation libs.androidx.fragment.ktx
 
     dependencies {
-        // Retrofit + Gson
+        // Retrofit + Moshi
         implementation libs.retrofit
-        implementation libs.converter.gson
+        implementation libs.converter.moshi
+        implementation libs.moshi
+        implementation libs.moshi.kotlin
 
         // OkHttp + Chucker Interceptor
         implementation libs.logging.interceptor
@@ -86,6 +88,10 @@ dependencies {
 
         // Hilt untuk Fragment dan Activity
         implementation libs.androidx.hilt.navigation.fragment
+
+        // WorkManager
+        implementation libs.androidx.work.runtime.ktx
+        implementation libs.androidx.hilt.work
 
         //Shimmer
         implementation 'com.facebook.shimmer:shimmer:0.5.0'
