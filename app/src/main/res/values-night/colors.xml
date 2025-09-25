@@ -6,8 +6,8 @@
     <color name="black">#000000</color>
     <color name="primaryColor">#FF4081</color>
     <color name="secondaryColor">#E91E63</color>
-    <color name="textColor">#000000</color>
-    <color name="backgroundColor">#FFFFFF</color>
-    <color name="gray">#7B7A7A</color>
-    <color name="gray_separator">#B6B5B5</color>
+    <color name="backgroundColor">#121212</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="gray">#B6B5B5</color>
+    <color name="gray_separator">#7B7A7A</color>
 </resources>

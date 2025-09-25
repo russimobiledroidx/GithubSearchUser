@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.chip.Chip
 import id.rushdroid.githubusersearch.R
 import id.rushdroid.githubusersearch.data.remote.model.RepoEntity
 
@@ -42,8 +43,8 @@ class RepositoryAdapter : ListAdapter<RepoEntity, RepositoryAdapter.RepoViewHold
             // Add topics dynamically
             repo.topics?.forEach { topic ->
                 val topicView = LayoutInflater.from(itemView.context).inflate(R.layout.topic_item, topicsContainer, false)
-                val topicTextView: TextView = topicView.findViewById(R.id.topicText)
-                topicTextView.text = topic
+                val topicChip: Chip = topicView.findViewById(R.id.topicText)
+                topicChip.text = topic
                 topicsContainer.addView(topicView)
             }
 
