@@ -8,9 +8,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/gradient_card"
         app:cardCornerRadius="16dp"
         app:cardElevation="500dp"
-        app:cardBackgroundColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -18,10 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:orientation="horizontal"
-
             android:padding="16dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -38,7 +35,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:text="User Name"
-                android:textColor="@android:color/black"
+                android:textColor="@color/textColor"
                 android:textSize="16sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

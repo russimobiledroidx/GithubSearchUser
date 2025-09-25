@@ -14,8 +14,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/white"
-            app:titleTextColor="@android:color/black"
+            android:background="@android:color/transparent"
+            app:titleTextColor="@color/white"
             app:navigationIcon="@drawable/ic_back_black" />
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"/>
 
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="@color/gray"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:gravity="center"
                 android:layout_marginTop="8dp"/>
 
@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:text="150 Repos"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/white"
                     android:layout_marginEnd="16dp"/>
 
                 <TextView
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:text="519 Followers"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/white"
                     android:layout_marginEnd="16dp"/>
 
                 <TextView
@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:text="0 Following"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
             <!-- TabLayout -->
@@ -109,9 +109,9 @@
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabIndicatorColor="@color/gray"
-                app:tabSelectedTextColor="@color/gray"
-                app:tabTextColor="@android:color/darker_gray"/>
+                app:tabIndicatorColor="@color/pink"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/gray"/>
 
             <!-- ViewPager -->
             <androidx.viewpager2.widget.ViewPager2

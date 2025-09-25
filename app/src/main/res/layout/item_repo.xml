@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@android:color/white"
-    android:layout_marginBottom="8dp">
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
     <!-- Repository Name -->
     <TextView
@@ -14,7 +27,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black" />
+        android:textColor="@color/textColor" />
 
     <!-- Repository Description -->
     <TextView
@@ -22,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="14sp"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@color/textColor"
         android:layout_marginTop="4dp" />
 
     <!-- Language and Stars/Forks -->
@@ -38,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@color/magenta"
             android:layout_marginEnd="16dp" />
 
         <!-- Stars -->
@@ -48,7 +61,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:drawableStart="@drawable/ic_star"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/textColor"
             android:layout_marginEnd="16dp" />
 
         <!-- Forks -->
@@ -58,27 +71,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:textColor="@android:color/darker_gray" />
+            android:textColor="@color/textColor" />
     </LinearLayout>
 
     <!-- Topics -->
-    <LinearLayout
+    <com.google.android.material.chip.ChipGroup
         android:id="@+id/topicsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="8dp"
-        android:visibility="gone"> <!-- Initially hidden -->
-
-        <!-- Example of a topic -->
-        <TextView
-            android:id="@+id/topicTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_rectangle_background"
-            android:padding="4dp"
-            android:textColor="@android:color/white"
-            android:textSize="12sp"
-            android:layout_marginEnd="4dp" />
-    </LinearLayout>
-</LinearLayout>
+        android:visibility="gone"
+        app:chipSpacing="8dp"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp"
+        app:singleLine="false"> <!-- Allow wrapping -->
+    </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
