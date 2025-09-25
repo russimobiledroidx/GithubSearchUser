@@ -1,9 +1,9 @@
 package id.rushdroid.githubusersearch.data.remote.response
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class UserResponse(
-    @SerializedName("login") val login: String,
-    @SerializedName("avatar_url") val avatarUrl: String,
-    @SerializedName("name") val name: String?
+    @Json(name = "login") val login: String,
+    @Json(name = "avatar_url") val avatarUrl: String,
+    @Json(name = "name") val name: String?
 )

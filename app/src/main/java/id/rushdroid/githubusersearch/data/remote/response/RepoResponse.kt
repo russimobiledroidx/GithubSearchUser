@@ -1,29 +1,29 @@
 package id.rushdroid.githubusersearch.data.remote.response
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class RepoResponse(
-    @field:SerializedName("id")
+    @Json(name = "id")
     val id: Int? = null,
 
-    @field:SerializedName("stargazers_count")
+    @Json(name = "stargazers_count")
     val stargazersCount: Int? = null,
 
-    @field:SerializedName("topics")
+    @Json(name = "topics")
     val topics: List<String?>? = null,
 
-    @field:SerializedName("description")
+    @Json(name = "description")
     val description: String? = null,
 
-    @field:SerializedName("language")
+    @Json(name = "language")
     val language: String? = null,
 
-    @field:SerializedName("updated_at")
+    @Json(name = "updated_at")
     val updatedAt: String? = null,
 
-    @field:SerializedName("name")
+    @Json(name = "name")
     val name: String? = null,
 
-    @field:SerializedName("forks_count")
+    @Json(name = "forks_count")
     val forksCount: Int? = null
 )
